@@ -930,4 +930,50 @@ body {
   height: 5rem;
   background: url("../img/master_s3.png") no-repeat;
 }
+
+/*eighth part*/
+.section8-container {
+  position: relative;
+  top: -45rem;
+  height: 70rem;
+  min-height: 50rem;
+  width: 100%;
+}
+
+.section8-container .section8-video {
+  z-index: 1;
+  pointer-events: none;
+  height: auto;
+  width: 100%;
+}
+
+.section8-container .section8::before {
+  position: relative;
+  top: 57rem;
+  left: 21rem;
+  content: "";
+  display: block;
+  background: url("../img/girl.png") no-repeat;
+  background-position: right;
+  background-size: contain;
+  height: 25rem;
+  width: 80vw;
+  z-index: 2;
+}
+
+.section8-container .section8-content {
+  position: relative;
+  top: -60rem;
+  left: 25rem;
+  background-color: rgba(18, 160, 149, 0.8);
+  height: 28rem;
+  width: 17rem;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.section8-container .section8-content p {
+  line-height: 2rem;
+}
 /*# sourceMappingURL=site.css.map */
