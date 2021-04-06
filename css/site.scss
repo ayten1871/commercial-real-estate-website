@@ -10,6 +10,16 @@
   flex-direction: column;
   align-items: center;
 }
+@mixin masterContent {
+  z-index: 2;
+  content: "";
+  position: relative;
+  top: 12rem;
+  left: -5rem;
+  display: block;
+  height: 5rem;
+}
+
 $fontSize: (
   "xxs": 0.5rem,
   "xs": 1.1rem,
@@ -562,7 +572,7 @@ body {
   }
   .section7-master {
     margin: 2rem;
-    height: 22rem;
+    height: 25rem;
     width: 17rem;
     border-width: 0.2rem;
     border-color: #c7945f;
@@ -571,7 +581,7 @@ body {
     .master-content {
       z-index: 1;
       position: relative;
-      top: -3rem;
+      top: -4rem;
       left: 1rem;
       .master-img {
         // z-index: 1;
@@ -589,15 +599,17 @@ body {
         width: 17rem;
       }
     }
-    .master-content::before {
-      z-index: 2;
+    .master1::before {
+      @include masterContent;
       background: url("../img/master_s1.png") no-repeat;
-      content: "";
-      position: relative;
-      top: 12rem;
-      left: -5rem;
-      display: block;
-      height: 5rem;
+    }
+    .master2::before {
+      @include masterContent;
+      background: url("../img/master_s2.png") no-repeat;
+    }
+    .master3::before {
+      @include masterContent;
+      background: url("../img/master_s3.png") no-repeat;
     }
   }
 }

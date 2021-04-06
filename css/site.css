@@ -866,7 +866,7 @@ body {
 
 .section7-right .section7-master {
   margin: 2rem;
-  height: 22rem;
+  height: 25rem;
   width: 17rem;
   border-width: 0.2rem;
   border-color: #c7945f;
@@ -876,7 +876,7 @@ body {
 .section7-right .section7-master .master-content {
   z-index: 1;
   position: relative;
-  top: -3rem;
+  top: -4rem;
   left: 1rem;
 }
 
@@ -898,14 +898,36 @@ body {
   width: 17rem;
 }
 
-.section7-right .section7-master .master-content::before {
+.section7-right .section7-master .master1::before {
   z-index: 2;
-  background: url("../img/master_s1.png") no-repeat;
   content: "";
   position: relative;
   top: 12rem;
   left: -5rem;
   display: block;
   height: 5rem;
+  background: url("../img/master_s1.png") no-repeat;
+}
+
+.section7-right .section7-master .master2::before {
+  z-index: 2;
+  content: "";
+  position: relative;
+  top: 12rem;
+  left: -5rem;
+  display: block;
+  height: 5rem;
+  background: url("../img/master_s2.png") no-repeat;
+}
+
+.section7-right .section7-master .master3::before {
+  z-index: 2;
+  content: "";
+  position: relative;
+  top: 12rem;
+  left: -5rem;
+  display: block;
+  height: 5rem;
+  background: url("../img/master_s3.png") no-repeat;
 }
 /*# sourceMappingURL=site.css.map */
