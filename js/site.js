@@ -52,7 +52,7 @@ gsap.from(".item-list", {
 // draggable background
 const el = document.querySelector(".section2");
 el.addEventListener("mousemove", (e) => {
-  let move=(e.pageX*-1/4)
+  let move=(e.pageX*-1/8)
   el.style.backgroundPositionX = move + "px ";
 });
 
@@ -108,3 +108,134 @@ gsap.from(".section4-2-img", {
   ease: "power4"
 })
 
+//fifth part
+gsap.from(".section5-content-title", {
+  scrollTrigger: {
+    trigger: ".section5-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 1, 
+  y: "10vh",
+  ease: "power3"
+})
+gsap.from(".section5-content-p", {
+  scrollTrigger: {
+    trigger: ".section5-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 1, 
+  y: "15vh",
+  ease: "power2"
+})
+gsap.from(".section5-content-bottom", {
+  scrollTrigger: {
+    start: "top center",
+    trigger: ".section5-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 1, 
+  y: "15vh",
+  ease: "power1"
+})
+gsap.from(".section5-img", {
+  scrollTrigger: {
+    start: "center bottom",
+    trigger: ".section5-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 1, 
+  y: "15vh",
+  ease: "power1"
+})
+gsap.from(".section5-grid-left", {
+  scrollTrigger: {
+    start: "center bottom",
+    trigger: ".section5-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 2, 
+  x: "-15vw",
+  ease: "power1"
+})
+gsap.from(".section5-grid-right", {
+  scrollTrigger: {
+    start: "center bottom",
+    trigger: ".section5-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 2, 
+  x: "15vw",
+  ease: "power1"
+})
+
+//sixth part
+gsap.from(".section6", {
+  scrollTrigger: {
+    trigger: ".section6-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 1, 
+  y: "20vh",
+  ease: "power4"
+})
+
+//seventh part
+gsap.from(".section7-left", {
+  scrollTrigger: {
+    trigger: ".section7-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 1, 
+  x: "-10vw",
+  ease: "power4"
+})
+gsap.from(".sectiion-right-title", {
+  scrollTrigger: {
+    trigger: ".section7-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 2, 
+  y: "10vh",
+  ease: "power4"
+})
+gsap.from(".sectiion-right-p", {
+  scrollTrigger: {
+    trigger: ".section7-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 3, 
+  y: "15vh",
+  ease: "power4"
+})
+gsap.from(".section7-right-down", {
+  scrollTrigger: {
+    trigger: ".section7-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 3, 
+  y: "20vh",
+  ease: "power2"
+})
+//eightth part
+gsap.from(".section8-content-text", {
+  scrollTrigger: {
+    start:"top center",
+    trigger: ".section8-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 2, 
+  y: "10vh",
+  ease: "power3"
+})
+
+//contact
+gsap.from(".contact-form", {
+  scrollTrigger: {
+    start:"top center",
+    trigger: ".contact-container",
+    toggleActions: "restart pause resume pause"
+  },
+  duration: 2, 
+  y: "10vh",
+  ease: "power3"
+})

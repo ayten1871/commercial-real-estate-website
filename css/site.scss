@@ -35,6 +35,7 @@ $colorSet: (
   "light": #dadada,
   "kaki ": #c7945f,
   "green": rgba(18, 160, 149, 0.8),
+  "thick-green": #12a095,
 );
 
 h1 {
@@ -197,7 +198,9 @@ body {
 .highlight {
   color: #c7945f;
 }
-
+.to-green {
+  color: map-get($colorSet, "thick-green");
+}
 /*second part*/
 .section2-container {
   width: 100%;
@@ -249,7 +252,7 @@ body {
   }
 
   &__curve {
-    background: url("../img/wave_down.png") no-repeat;
+    background: url("../img/wave_top.png") no-repeat;
     background-position: bottom;
     height: 55rem;
     width: 100vw;
@@ -389,7 +392,7 @@ body {
   top: -17rem;
   background: url("../img/src_bg.jpg") no-repeat;
   background-position: top;
-  height: 150vh;
+  height: 160vh;
   min-height: 65rem;
   background-size: cover;
   @include flexCol;
@@ -426,9 +429,9 @@ body {
     // width: 60%;
     // height: 60vh;
     grid-template-areas:
-      "item1 img item2"
-      "item3 img item4"
-      "item5 img item6";
+      "item1 img item4"
+      "item2 img item5"
+      "item3 img item6";
     grid-template-columns: auto auto auto;
     grid-template-rows: 5rem 5rem 5rem;
     grid-gap: 2rem;
@@ -484,7 +487,7 @@ body {
     url("../img/bg_night_bmw.jpg") no-repeat;
   background-position: top;
   background-size: cover;
-  height: 150vh;
+  height: 130vh;
   min-height: 50rem;
   width: 100%;
   @include flexRow;
@@ -562,7 +565,9 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    margin-bottom: 15rem;
+    margin-right: 6rem;
+    justify-content: center;
     //text-align: center;
     //@include flexRow;
   }
@@ -616,36 +621,31 @@ body {
 /*eighth part*/
 .section8-container {
   position: relative;
-  top: -45rem;
+  top: -20rem;
+  //height: 100vh;
   height: 70rem;
   min-height: 50rem;
   width: 100%;
+  .section8-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 65%;
+  }
+
   .section8-video {
-    z-index: 1;
+    //z-index: ;
     pointer-events: none;
     //max-width: 670px;
-    height: auto;
-    width: 100%;
-  }
-  .section8::before {
-    position: relative;
-    top: 57rem;
-    left: 21rem;
-    content: "";
-    display: block;
-    background: url("../img/girl.png") no-repeat;
-    background-position: right;
-    background-size: contain;
-    height: 25rem;
-    width: 80vw;
-    z-index: 2;
+    height: 70rem;
+    width: auto;
   }
   .section8-content {
-    position: relative;
-    top: -60rem;
-    left: 25rem;
-    background-color: map-get($colorSet, "green");
-    height: 28rem;
+    position: absolute;
+    top: -3rem;
+    left: 24rem;
+    background-color: map-get($colorSet, "thick-green");
+    height: 29rem;
     width: 17rem;
     color: white;
     padding: 1rem;
@@ -654,4 +654,65 @@ body {
       line-height: 2rem;
     }
   }
+}
+
+/*contact*/
+.contact-container {
+  background: url("../img/contact_bg.jpg") no-repeat;
+  height: 130vh;
+  width: 100%;
+  position: relative;
+}
+.contact-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  fieldset {
+    margin: 1.5rem;
+    width: 25rem;
+    display: inline-block;
+    border: 0;
+    color: white;
+    justify-content: center;
+  }
+  .fieldset-title {
+    display: block;
+  }
+  .contact-input {
+    border-color: white;
+    border-style: solid;
+    border-width: 0.2rem;
+    width: 100%;
+    height: 3rem;
+    color: map-get($colorSet, "grey");
+    font-size: map-get($fontSize, "xs");
+    background: transparent;
+  }
+  address {
+    color: white;
+    //line-height: 2rem;
+  }
+  .fieldset-btn {
+    color: white;
+    border: none;
+    padding: 0;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: map-get($fontSize, "xs");
+    padding: 0.5rem 0;
+  }
+  .fieldset-btn-left {
+    background-color: map-get($colorSet, "black");
+  }
+  .fieldset-btn-right {
+    background-color: map-get($colorSet, "thick-green");
+  }
+}
+.footer-wave {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
 }
