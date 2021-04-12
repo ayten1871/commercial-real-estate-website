@@ -19,7 +19,7 @@
   display: block;
   height: 5rem;
 }
-
+/*font size set*/
 $fontSize: (
   "xxs": 0.5rem,
   "xs": 1.1rem,
@@ -38,6 +38,7 @@ $colorSet: (
   "thick-green": #12a095,
 );
 
+/*global set*/
 h1 {
   font-size: map-get($fontSize, "xl");
 }
@@ -74,6 +75,13 @@ body {
   //color: map-get($colorSet, "black");
   background-color: white;
 }
+.highlight {
+  color: #c7945f;
+}
+.to-green {
+  color: map-get($colorSet, "thick-green");
+}
+
 /*header part*/
 .header-container {
   display: block;
@@ -188,18 +196,33 @@ body {
 }
 .section1 {
   @include flexRow;
-  &__left {
+  .section1-left {
     color: map-get($colorSet, "grey");
   }
-  &__right {
+  .section1-right {
     letter-spacing: 0.1rem;
+    .section1-right-h {
+      color: map-get($colorSet, "grey");
+    }
   }
 }
-.highlight {
-  color: #c7945f;
-}
-.to-green {
-  color: map-get($colorSet, "thick-green");
+
+@media (max-width: 480px) {
+  .section1-container {
+    height: 130vh;
+  }
+  .section1 {
+    @include flexCol;
+  }
+  .section1-left {
+    width: 20rem;
+    .section1-left-img {
+      width: 100%;
+    }
+  }
+  .section1-right {
+    width: 20rem;
+  }
 }
 /*second part*/
 .section2-container {
@@ -269,13 +292,14 @@ body {
     transform: translateX(0);
   }
 }
+
 /*third part*/
 .section3-container {
   background: url("../img/mrt.png") no-repeat;
-  height: 120vh;
+  height: 130vh;
   width: 100%;
-  background-position: right;
-  background-size: contain;
+  background-position: center;
+  background-size: 78%;
   @include flexCol;
 }
 .section3 {
@@ -288,11 +312,22 @@ body {
   color: white;
   padding: 1.5rem;
 }
+
+@media (max-width: 480px) {
+  .section3 {
+    width: 100vw;
+  }
+  .section3-content {
+    width: 80vw;
+    margin: 1rem;
+  }
+}
 /*fourth part*/
 .section4-container {
   position: relative;
   top: -15rem;
-  @include flexRow;
+  // @include flexRow;
+  @include flexCol;
   background: url("../img/transport_bg.jpg") no-repeat;
   background-position: bottom;
   height: 150vh;
@@ -300,9 +335,11 @@ body {
 }
 .section4-1 {
   position: relative;
+  top: -5rem;
   left: 5rem;
   @include flexRow;
   width: 80%;
+  margin-bottom: 2rem;
 
   video {
     pointer-events: none;
@@ -385,7 +422,7 @@ body {
     margin-left: -2rem;
   }
 }
-
+/*fifth part*/
 .section5-container {
   z-index: -2;
   position: relative;

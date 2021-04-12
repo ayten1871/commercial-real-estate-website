@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*font size set*/
+/*global set*/
 h1 {
   font-size: 2rem;
 }
@@ -46,6 +48,14 @@ body {
   font-weight: 600;
   font-style: normal;
   background-color: white;
+}
+
+.highlight {
+  color: #c7945f;
+}
+
+.to-green {
+  color: #12a095;
 }
 
 /*header part*/
@@ -244,20 +254,43 @@ body {
           align-items: center;
 }
 
-.section1__left {
+.section1 .section1-left {
   color: #656464;
 }
 
-.section1__right {
+.section1 .section1-right {
   letter-spacing: 0.1rem;
 }
 
-.highlight {
-  color: #c7945f;
+.section1 .section1-right .section1-right-h {
+  color: #656464;
 }
 
-.to-green {
-  color: #12a095;
+@media (max-width: 480px) {
+  .section1-container {
+    height: 130vh;
+  }
+  .section1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section1-left {
+    width: 20rem;
+  }
+  .section1-left .section1-left-img {
+    width: 100%;
+  }
+  .section1-right {
+    width: 20rem;
+  }
 }
 
 /*second part*/
@@ -382,10 +415,10 @@ body {
 /*third part*/
 .section3-container {
   background: url("../img/mrt.png") no-repeat;
-  height: 120vh;
+  height: 130vh;
   width: 100%;
-  background-position: right;
-  background-size: contain;
+  background-position: center;
+  background-size: 78%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,6 +443,16 @@ body {
   padding: 1.5rem;
 }
 
+@media (max-width: 480px) {
+  .section3 {
+    width: 100vw;
+  }
+  .section3-content {
+    width: 80vw;
+    margin: 1rem;
+  }
+}
+
 /*fourth part*/
 .section4-container {
   position: relative;
@@ -417,15 +460,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -437,6 +475,7 @@ body {
 
 .section4-1 {
   position: relative;
+  top: -5rem;
   left: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,6 +493,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
+  margin-bottom: 2rem;
 }
 
 .section4-1 video {
@@ -552,6 +592,7 @@ body {
   margin-left: -2rem;
 }
 
+/*fifth part*/
 .section5-container {
   z-index: -2;
   position: relative;
