@@ -1,6 +1,6 @@
-# demo_page_bmwlife
+# commercial-real-estate-website
 
-- An imitated single page real estate Ad website for practice
+- An imitated single page real estate Ad website for demo
 - Credit to the original designers
 
 ---
